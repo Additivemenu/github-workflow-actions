@@ -5,11 +5,9 @@ on:
       - opened
       - synchronize
       - reopened
-    branches:
-      - "*-release"
-      - "**/*-release" # This catches branches with slashes like feature/my-release
 jobs:
   test:
+    if: endsWith(github.event.pull_request.head.ref, '-release')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
