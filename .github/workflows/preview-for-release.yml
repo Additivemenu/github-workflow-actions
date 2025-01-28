@@ -6,7 +6,7 @@ on:
       - synchronize
       - reopened
     branches:
-      - "*-release"
+      - "**-release"
 jobs:
   test:
     runs-on: ubuntu-latest
