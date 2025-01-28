@@ -6,7 +6,8 @@ on:
       - synchronize
       - reopened
     branches-ignore:
-      - "**-release" # Use branches-ignore instead of '!*-release'
+      - "*-release"
+      - "**/*-release" # This catches branches with slashes like feature/my-release
 jobs:
   test:
     runs-on: ubuntu-latest
