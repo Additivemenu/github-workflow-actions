@@ -5,9 +5,8 @@ on:
       - opened
       - synchronize
       - reopened
-    branches:
-      - "**"
-      - "!**-release"
+    branches-ignore:
+      - "*-release" # Use branches-ignore instead of '!*-release'
 jobs:
   test:
     runs-on: ubuntu-latest
