@@ -1,0 +1,16 @@
+name: Preview For Release
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+    branches:
+      - "*-release"
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Print message
+        run: echo "This is running on a release branch"
